@@ -5,11 +5,15 @@
     'use strict';
     angular.module('mwt').controller('HomeCtrl', HomeCtrl);
 
-    HomeCtrl.$inject = [];
+    HomeCtrl.$inject = ['$rootScope'];
 
-    function HomeCtrl() {
+    function HomeCtrl($rootScope) {
         var vm = this;
 
+        $rootScope.user = {
+            email: 'jorgedantas@gmail.com',
+            nome: 'Jorge Dantas'
+        };
         activate();
 
         function activate() {
